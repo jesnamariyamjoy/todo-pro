@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pro To-Do App</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>✔ My Tasks</h1>
+
+  <button id="toggleMode">🌙 Dark Mode</button>
+
+  <div class="input-container">
+    <input type="text" id="taskInput" placeholder="Add task...">
+    <input type="date" id="dueDate">
+    <button id="addBtn">➕</button>
+  </div>
+
+  <input type="text" id="search" placeholder="Search tasks...">
+
+  <select id="filter">
+    <option value="all">All</option>
+    <option value="completed">Completed</option>
+    <option value="pending">Pending</option>
+  </select>
+
+  <!-- Analytics -->
+  <div class="analytics">
+    <p>Total: <span id="total">0</span></p>
+    <p>Completed: <span id="completed">0</span></p>
+    <p>Pending: <span id="pending">0</span></p>
+  </div>
+
+  <!-- Chart -->
+  <canvas id="taskChart" height="200"></canvas>
+
+  <ul id="taskList"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
